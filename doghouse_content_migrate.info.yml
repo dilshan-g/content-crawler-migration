@@ -1,0 +1,18 @@
+name: Doghouse Content Migration
+type: module
+description: Migrate site content to drupal content types.
+core: 8.x
+version: 8.x-1.0
+package: Doghouse
+dependencies:
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+
+
+# To re-import below migrations/configs run `drush cdi doghouse_content_migrate`
+config_devel:
+  install:
+  - migrate_plus.migration.pages
+  - migrate_plus.migration.images
+  - migrate_plus.migration.files
+  - migrate_plus.migration_group.json_import
