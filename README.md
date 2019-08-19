@@ -1,6 +1,6 @@
 # Doghouse Content Migration 
 
-This module migrates the web page content and media files into a clean GovCMS instance. This module
+This Drupal 8 module migrates the web page content and media files into a clean GovCMS instance. This module
 expects a json input as its source. We use a third-party plugin to crawl through the site we need to migrate and generate the json source.  
 
 Download and install `Content Crawler` by [Jeremy Graham](https://jez.me) :
