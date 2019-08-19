@@ -1,4 +1,4 @@
-name: Doghouse Content Migration
+name: Content Crawler Migration
 type: module
 description: Migrate site content to drupal content types.
 core: 8.x

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\doghouse_content_migrate\Plugin\migrate\process;
+namespace Drupal\content_crawler_migration\Plugin\migrate\process;
 
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\ProcessPluginBase;

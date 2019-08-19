@@ -1,4 +1,4 @@
-# Doghouse Content Migration 
+# Content Crawler Migration 
 
 This Drupal 8 module migrates the web page content and media files into a clean GovCMS instance. This module
 expects a json input as its source. We use a third-party plugin to crawl through the site we need to migrate and generate the json source.  
@@ -34,7 +34,7 @@ Download the Drupal module to your `docroot/modules/custom` directory
 Enable the module and its dependencies:
 
 ```
-drush en doghouse_content_migrate
+drush en content_crawler_migration
 ``` 
 
 ## Usage
@@ -68,7 +68,7 @@ you might need to uninstall and reinstall the `doghouse_content_migrate` module 
 Install the config devel module and add this code snippet to the module info file:
 
 ```
-# To re-import below migrations/configs run `drush cdi doghouse_content_migrate`
+# To re-import below migrations/configs run `drush cdi content_crawler_migration`
 config_devel:
   install:
   - migrate_plus.migration.pages
@@ -79,7 +79,7 @@ config_devel:
 Then simply add execute this Drush command to re-import the configs:
 
 ```
-drush cdi doghouse_content_migrate
+drush cdi content_crawler_migration
 ``` 
 
  
