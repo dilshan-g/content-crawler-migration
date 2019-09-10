@@ -63,7 +63,7 @@ Check your vanilla GovCMS installation for the migrated content.
 
 
 If you don't have [Config devel](https://www.drupal.org/project/config_devel) installed and configured,
-you might need to uninstall and reinstall the `doghouse_content_migrate` module every time you make a change to the .yml.
+you might need to uninstall and reinstall the `content_crawler_migration` module every time you make a change to the .yml.
 
 Install the config devel module and add this code snippet to the module info file:
 

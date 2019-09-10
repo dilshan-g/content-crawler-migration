@@ -57,7 +57,7 @@ process:
   field_media_image:
     plugin: file_import
     source: url
-    destination_dir: 'public://images'
+    destination_dir: 'public://'
 
 destination:
   plugin: entity:media

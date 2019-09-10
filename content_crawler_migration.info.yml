@@ -7,9 +7,11 @@ package: Doghouse
 dependencies:
   - migrate_plus:migrate_plus
   - migrate_tools:migrate_tools
+  - migrate_devel:migrate_devel
+  - config_devel:config_devel
 
 
-# To re-import below migrations/configs run `drush cdi doghouse_content_migrate`
+# To re-import below migrations/configs run `drush cdi content_crawler_migration`
 config_devel:
   install:
   - migrate_plus.migration.pages
