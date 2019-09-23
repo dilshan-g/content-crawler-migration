@@ -1,0 +1,46 @@
+# This migration demonstrates a simple import from a JSON file.
+id: pages
+label: Menu Import
+migration_group: json_import
+migration_tags:
+  - json example
+source:
+  plugin: url
+  # data_fetcher_plugin: http
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - 'public://migrate_json_example/pages.json'
+  item_selector: pages
+  fields:
+    - name: url
+      label: 'Unique ID'
+      selector: url
+    -
+      name: alias
+      label: 'Unique Alias'
+      selector: alias
+    -
+      name: title
+      label: 'Menu link text'
+      selector: title
+  ids:
+    url:
+      type: string
+process:
+  bundle:
+    plugin: default_value
+    default_value: menu_link_content
+  title: title
+  menu_name:
+    plugin: default_value
+    default_value: main
+  link/uri:
+    plugin: link_uri
+    source:
+      - alias
+destination:
+  plugin: entity:menu_link_content
+migration_dependencies:
+  required:
+    - pages
